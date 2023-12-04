@@ -1,0 +1,12 @@
+/*Header style*/
+.header {
+  height: 75px;
+}
+
+.header h1 {
+  margin: 0;
+  padding-top: 10px;
+  text-align: center;
+  color: white;
+  font-size: 3rem;
+}
