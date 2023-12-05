@@ -1,31 +1,31 @@
-import { Nav } from 'react-bootstrap';
+import { Nav } from 'react-bootstrap'; //https://react-bootstrap.netlify.app/docs/components/navbar
+import { NavLink } from 'react-router-dom';
 
-function Navigation(currentPage) { // Ensure props are destructured properly
+function Navigation() {
   return (
     <Nav variant="tabs" defaultActiveKey="/">
-      {/* Navigation links using Nav.Link */} /
-    <Nav.Item>
-        <Nav.Link to="/About" className={currentPage === 'About' ? 'nav-link active' : 'nav-link'}>
+      <Nav.Item>
+        <NavLink exact to="/About" className="nav-link" activeClassName="active">
           About Me
-        </Nav.Link>
+        </NavLink>
       </Nav.Item>
       
       <Nav.Item>
-        <Nav.Link to="/Contact" className={currentPage === 'Contact' ? 'nav-link active' : 'nav-link'}>
+        <NavLink to="/Contact" className="nav-link" activeClassName="active">
           Contact
-        </Nav.Link>
+        </NavLink>
       </Nav.Item>
 
       <Nav.Item>
-        <Nav.Link to="/Portfolio" className={currentPage === 'Portfolio' ? 'nav-link active' : 'nav-link'}>
+        <NavLink to="/Portfolio" className="nav-link" activeClassName="active">
           Portfolio
-        </Nav.Link>
+        </NavLink>
       </Nav.Item>
 
       <Nav.Item>
-        <Nav.Link to="/Resume" className={currentPage === 'Resume' ? 'nav-link active' : 'nav-link'}>
+        <NavLink to="/Resume" className="nav-link" activeClassName="active">
           Resume
-        </Nav.Link>
+        </NavLink>
       </Nav.Item>
     </Nav>
   );
