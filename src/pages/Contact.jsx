@@ -1,7 +1,14 @@
 import { useState } from 'react';
+import "../styles/style.css";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: '',
+  });
+
+  const [errors, setErrors] = useState({
     name: '',
     email: '',
     message: '',
@@ -11,18 +18,49 @@ const Contact = () => {
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
+    setErrors({ ...errors, [e.target.name]: '' });
+  };
+
+  const validateEmail = (email) => {
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(email);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // You can implement the logic here to handle the form submission
+
+    let formErrors = {};
+
+    // Validate name field
+    if (name.trim() === '') {
+      formErrors = { ...formErrors, name: 'Name is required' };
+    }
+
+    // Validate email field
+    if (email.trim() === '') {
+      formErrors = { ...formErrors, email: 'Email is required' };
+    } else if (!validateEmail(email)) {
+      formErrors = { ...formErrors, email: 'Invalid email address' };
+    }
+
+    // Validate message field
+    if (message.trim() === '') {
+      formErrors = { ...formErrors, message: 'Message is required' };
+    }
+
+    if (Object.keys(formErrors).length > 0) {
+      setErrors(formErrors);
+      return;
+    }
+
     console.log('Form submitted:', formData);
-    // Clear form fields after submission (optional)
+
     setFormData({ name: '', email: '', message: '' });
+    setErrors({ name: '', email: '', message: '' });
   };
 
   return (
-    <div>
+    <div className="contact-container">
       <h1>Contact Me</h1>
       <form onSubmit={handleSubmit}>
         <div>
@@ -34,7 +72,9 @@ const Contact = () => {
             value={name}
             onChange={handleChange}
             required
+            className="contact-input"
           />
+          {errors.name && <p className="error">{errors.name}</p>}
         </div>
         <div>
           <label htmlFor="email">Email:</label>
@@ -45,7 +85,9 @@ const Contact = () => {
             value={email}
             onChange={handleChange}
             required
+            className="contact-input"
           />
+          {errors.email && <p className="error">{errors.email}</p>}
         </div>
         <div>
           <label htmlFor="message">Message:</label>
@@ -55,9 +97,16 @@ const Contact = () => {
             value={message}
             onChange={handleChange}
             required
+            className="contact-input"
           ></textarea>
+          {errors.message && <p className="error">{errors.message}</p>}
         </div>
-        <button type="submit">Submit</button>
+        <div className="error-container">
+          {Object.keys(errors).some((key) => errors[key]) && (
+            <p className="error">Please fill out all required fields correctly.</p>
+          )}
+        </div>
+        <button type="submit" className="contact-submit">Submit</button>
       </form>
     </div>
   );

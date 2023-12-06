@@ -1,21 +1,23 @@
+import "../styles/style.css"
 export default function About() {
-    return (
-      <div>
-        <h1>About Page</h1>
-        <p>
-          Hey there! I&apos;m Katrina Sarmiento, currently immersed in the world of full-stack web development at the University of Toronto. I&apos;m driven by the desire to combine creativity with technical expertise, crafting innovative digital solutions that leave a lasting impact.
-  
-          My journey into the realm of technology began with a fascination for how websites and applications are constructed, leading me to pursue a comprehensive education in web development. Throughout my course, I&apos;ve delved into various programming languages, frameworks, and design principles, aiming not just to learn, but to innovate.
-  
-          Beyond coding, I&apos;m passionate about creating user-centric, seamless experiences. I believe that technology is not just about lines of code; it&apos;s about enhancing lives, solving problems, and connecting people.
-  
-          My current focus lies in mastering the art of full-stack development, where I&apos;m learning to build robust backend infrastructures while refining my front-end design skills. This comprehensive approach enables me to envision, create, and deploy projects from start to finish.
-  
-          My ultimate goal? To leverage my skills and knowledge to contribute meaningfully to a tech company or exciting projects. I&apos;m eagerly looking forward to the opportunities ahead, where I can apply my skills, learn from experiences, and collaborate with diverse teams to bring exceptional ideas to life.
-  
-          When I&apos;m not engrossed in code, you&apos;ll find me exploring new technologies, engaging in design thinking exercises, or experimenting with personal projects. I thrive in environments that encourage creativity, innovation, and continuous learning.
-  
-          I&apos;m excited to connect, collaborate, and embark on this exhilarating journey in the world of technology. Let&apos;s build something amazing together!
+  return (
+    <div className="about-container">
+      <h1>About Page</h1>
+      <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+      Eget dolor morbi non arcu risus quis varius. Mi quis hendrerit dolor magna eget est lorem ipsum. Purus viverra accumsan in nisl 
+      nisi scelerisque eu. Sed libero enim sed faucibus turpis in. Viverra maecenas accumsan lacus vel facilisis volutpat est velit. 
+      Dolor sit amet consectetur adipiscing elit ut aliquam purus. Habitant morbi tristique senectus et netus et malesuada. 
+      Congue nisi vitae suscipit tellus mauris a diam maecenas. Morbi tristique senectus et netus. Aenean euismod elementum nisi
+      quis eleifend quam adipiscing vitae. Cursus eget nunc scelerisque viverra mauris in aliquam sem fringilla. 
+   
+      </p>
+      <p>
+      Vel pretium lectus quam id leo in vitae turpis massa. Interdum varius sit amet mattis vulputate. Feugiat in fermentum posuere 
+      urna nec tincidunt praesent. Sed adipiscing diam donec adipiscing. Nunc eget lorem dolor sed viverra ipsum. Imperdiet sed euismod
+      nisi porta lorem mollis. Ultrices neque ornare aenean euismod elementum nisi. Platea dictumst vestibulum rhoncus est pellentesque 
+      elit ullamcorper dignissim. Mi ipsum faucibus vitae aliquet nec ullamcorper sit amet risus. Sit amet consectetur adipiscing elit 
+      ut aliquam.
         </p>
       </div>
     );

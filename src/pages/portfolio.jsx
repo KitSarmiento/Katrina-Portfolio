@@ -1,57 +1,61 @@
 import Project from '../components/project';
+import "../styles/style.css";
 
 const Portfolio = () => {
-  const projects = [
+  const projectsItems = [
     {
-      title: 'Project 1',
-      image: 'url_to_image_1.jpg',
-      projectLink: 'url_to_project_1',
-      githubLink: 'url_to_github_1',
+      title: 'Weather Dashboard',
+      image: '/WeatherDashboard.png',
+      projectLink: 'https://kitsarmiento.github.io/Weather-Dashboard/',
+      githubLink: 'https://github.com/KitSarmiento/Weather-Dashboard',
     },
     {
-      title: 'Project 2',
-      image: 'url_to_image_2.jpg',
-      projectLink: 'url_to_project_2',
-      githubLink: 'url_to_github_2',
+      title: 'J.A.T.E. Text Editor',
+      image: '/jate.png',
+      projectLink: 'https://jate-text-editor.onrender.com/',
+      githubLink: 'https://github.com/KitSarmiento/pwa-text-editor',
     },
     {
-      title: 'Project 3',
-      image: 'url_to_image_3.jpg',
-      projectLink: 'url_to_project_3',
-      githubLink: 'url_to_github_3',
+      title: 'Nate Taker',
+      image: '/NoteTaker.png',
+      projectLink: 'https://mighty-bayou-75107-3d2f68bf65b2.herokuapp.com/',
+      githubLink: 'https://github.com/KitSarmiento/Note-Taker',
     },
     {
-      title: 'Project 4',
-      image: 'url_to_image_4.jpg',
-      projectLink: 'url_to_project_4',
-      githubLink: 'url_to_github_4',
+      title: 'Employee Tracker',
+      image: '/EmployeeTracker.png',
+      projectLink: 'https://github.com/KitSarmiento/Employee-Tracker',
+      githubLink: 'https://github.com/KitSarmiento/Employee-Tracker',
     },
     {
-      title: 'Project 5',
-      image: 'url_to_image_5.jpg',
-      projectLink: 'url_to_project_5',
-      githubLink: 'url_to_github_5',
+      title: 'Toronto Newcomers Guide (TNG)',
+      image: '/tng.jpg',
+      projectLink: 'https://uoftgroup3.github.io/toronto-newcomers-guide/',
+      githubLink: 'https://github.com/UofTGroup3/toronto-newcomers-guide',
     },
     {
-      title: 'Project 6',
-      image: 'url_to_image_6.jpg',
-      projectLink: 'url_to_project_6',
-      githubLink: 'url_to_github_6',
+      title: 'Event Ally',
+      image: '/eventAlly.png',
+      projectLink: 'https://event-ally-54aab8b70992.herokuapp.com/',
+      githubLink: 'https://github.com/KitSarmiento/event-ally',
     },
 
   ];
 
   return (
-    <div className="portfolio">
-      {projects.map((project, index) => (
-        <Project
-          key={index}
-          title={project.title}
-          image={project.image}
-          projectLink={project.projectLink}
-          githubLink={project.githubLink}
-        />
-      ))}
+    <div className="portfolioContainer">
+      <h1 className="portfolioHeading">Portfolio</h1>
+      <div className="portfolioGrid">
+        {projectsItems.map((item, index) => (
+          <Project
+            key={index}
+            title={item.title}
+            image={item.image}
+            projectLink={item.projectLink}
+            githubLink={item.githubLink}
+          />
+        ))}
+      </div>
     </div>
   );
 };
