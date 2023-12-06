@@ -1,4 +1,5 @@
-import resumePDF from '../assets/KatrinaSarmientoCV.pdf'; // Import your PDF file
+import resumePDF from '../assets/KatrinaSarmientoCV.pdf'; // Import my resume/CV PDF file
+import "../styles/style.css"
 
 const Resume = () => {
   // Front-end skills
@@ -12,8 +13,8 @@ const Resume = () => {
   ];
 
   return (
-    <div>
-      <h2>Resume</h2>
+    <div className="about-container">
+      <h1>Resume</h1>
 
       <p>
         <a href={resumePDF} download>
@@ -21,23 +22,25 @@ const Resume = () => {
         </a>
       </p>
 
-      <section>
-        <h3>Front-End Skills</h3>
-        <ul>
-          {frontEndSkills.map((skill, index) => (
-            <li key={index}>{skill}</li>
-          ))}
-        </ul>
-      </section>
+      <div className="skills-container">
+        <section className="skills-section">
+          <h2>Front-End Skills</h2>
+          <ul>
+            {frontEndSkills.map((skill, index) => (
+              <li key={index}>{skill}</li>
+            ))}
+          </ul>
+        </section>
 
-      <section>
-        <h3>Back-End Skills</h3>
-        <ul>
-          {backEndSkills.map((skill, index) => (
-            <li key={index}>{skill}</li>
-          ))}
-        </ul>
-      </section>
+        <section className="skills-section">
+          <h2>Back-End Skills</h2>
+          <ul>
+            {backEndSkills.map((skill, index) => (
+              <li key={index}>{skill}</li>
+            ))}
+          </ul>
+        </section>
+      </div>
     </div>
   );
 };

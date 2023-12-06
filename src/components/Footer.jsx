@@ -1,9 +1,11 @@
 import { FaLinkedin, FaFacebook, FaGithub, FaInstagram } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
+import "../styles/style.css"
 
 const Footer = () => {
   return (
     <footer>
+    <div className="footer">
       <div className="footer-icons">
         <a href="https://www.linkedin.com/in/kmsarmiento/" target="_blank" rel="noopener noreferrer">
           <FaLinkedin />
@@ -17,12 +19,13 @@ const Footer = () => {
         <a href="https://www.instagram.com/kitsarmiento20/" target="_blank" rel="noopener noreferrer">
           <FaInstagram />
         </a>
-        <a href="ksarmiento020@gmail.com">
+        <a href="mailto:ksarmiento020@gmail.com">
           <MdEmail />
         </a>
       </div>
-    </footer>
-  );
+    </div>
+  </footer>
+);
 };
 
 export default Footer;

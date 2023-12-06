@@ -1,12 +1,259 @@
-/*Header style*/
+:root {
+  --main-background: #f7f7f7; /* Light grayish background color */
+  --header-text-color: #ffffff; /* White text color for the header */
+  --footer-background: #34495e; /* Dark blue-gray background for the footer */
+  --footer-text-color: #ecf0f1; /* Light gray color for footer text */
+  --about-heading-color: #2c3e50; /* Dark blue-gray color for the headings */
+  --about-paragraph-color: #333;
+  --contact-button-color: #34495e;
+  --about-container-bg: #c9ada7;
+  --about-heading-text: #9a8c98;
+  --about-paragraph-text: #22223b;
+  --contact-form-bg: #4a4e69;
+  --contact-form-heading: #f2e9e4;
+  --contact-form-label-text: #f2e9e4;
+  --contact-form-input-border: #c9ada7;
+  --contact-form-button-bg: #22223b;
+  --contact-form-button-text: #f2e9e4;
+  --contact-form-button-hover: #9a8c98;
+}
+
+body {
+  margin: 20px;
+  padding-bottom: 70px; /* Add padding to create space for the footer */
+  background-color: var(--main-background);
+}
+
+/* Header design and style */
 .header {
-  height: 75px;
+  height: 250px;
+  background-image: url("../assets/Trees.jpg");
+  background-size: cover;
+  background-position: center;
 }
 
 .header h1 {
   margin: 0;
-  padding-top: 10px;
+  padding-top: 120px;
   text-align: center;
-  color: rgb(42, 2, 2);
+  color: var(--header-text-color);
   font-size: 3rem;
+  text-shadow: 5px 5px 4px rgba(0, 0, 0, 0.9);
+}
+/* Styling for Navigation component */
+
+.nav-tabs {
+  background-color: var(
+    --header-background-color
+  ); /* Change to your header background color */
+  padding: 10px;
+  border-bottom: 2px solid var(--footer-background); /* Change to your desired border color and size */
+}
+
+.nav-item {
+  margin-right: 10px;
+}
+
+.nav-link {
+  color: var(--nav-link-color); /* Change to your desired link color */
+  font-weight: bold;
+  padding: 5px 15px;
+  border-radius: 5px;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(
+    --nav-link-hover-color
+  ); /* Change to your desired hover and active link color */
+  background-color: var(
+    --nav-link-hover-bg
+  ); /* Change to your desired hover background color */
+  text-decoration: none;
+}
+
+/* Footer design and style */
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  background-color: var(--footer-background);
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  color: var(--footer-text-color);
+}
+
+.footer-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px; /* Adjust spacing between line and icons */
+  z-index: 999;
+}
+
+.footer-icons a {
+  font-size: 24px; /* Adjust icon size */
+  margin: 0 10px; /* Adjust icon spacing */
+  color: #333; /* Icon color */
+  z-index: 999;
+}
+
+.footer a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ecf0f1;
+  font-size: 24px;
+  transition: color 0.3s ease;
+  z-index: 999;
+}
+
+.footer-icons a:hover {
+  color: #d2ad99;
+}
+
+/* About Me container design and style */
+.about-container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  font-family: "Arial", sans-serif;
+  line-height: 1.6;
+  background-color: var(--about-container-bg);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about-container h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: var(--about-heading-text);
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.about-container p {
+  font-size: 1.1rem;
+  color: var(--about-paragraph-text);
+  text-align: justify;
+}
+
+/* Contact form design and style */
+/* Contact form design and style */
+.contact-container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: var(--contact-form-bg);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-container h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 20px;
+  color: var(--contact-form-heading);
+}
+
+.contact-container label {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--contact-form-label-text);
+}
+
+.contact-container input[type="text"],
+.contact-container input[type="email"],
+.contact-container textarea {
+  width: 60%;
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 4px;
+  border: 1px solid var(--contact-form-input-border);
+  margin-bottom: 10px;
+  display: block;
+  box-sizing: border-box;
+  color: var(--contact-form-input-text);
+}
+
+.contact-container textarea {
+  width: 60%;
+  min-height: 50%; /* Set minimum height */
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 4px;
+  border: 1px solid var(--contact-form-input-border);
+  margin-bottom: 10px;
+  display: block;
+  box-sizing: border-box;
+  color: var(--contact-form-input-text);
+}
+
+.contact-container button[type="submit"] {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: var(--contact-form-button-bg);
+  color: var(--contact-form-button-text);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button[type="submit"]:hover {
+  background-color: var(--contact-form-button-hover);
+}
+
+/* Resume page design and style */
+
+.skills-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.skills-section {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.skills-section:last-child {
+  margin-right: 0;
+}
+
+/* Styles for portfolio */
+.portfolioContainer {
+  margin: 20px;
+}
+
+.portfolioHeading {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: var(--about-heading-text);
+}
+
+.portfolioGrid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.portfolioCard {
+  width: calc(33.33% - 20px); /* Adjust width to create three columns */
+  padding: 15px;
+  margin-bottom: 20px;
+  background-color: var(--card-background);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (max-width: 768px) {
+  .portfolio-card {
+    width: calc(50% - 20px); /* Show two columns on smaller screens */
+  }
 }
