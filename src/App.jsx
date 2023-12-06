@@ -7,10 +7,9 @@ function App() {
   return (
     <div>
       <Header />
-      <Navigation/>
+      <Navigation />
       <Outlet />
       <Footer />
-
     </div>
   );
 }
