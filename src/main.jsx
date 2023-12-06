@@ -5,6 +5,7 @@ import App from './App';
 import About from './pages/AboutMe';
 import Contact from './pages/Contact';
 import Portfolio from './pages/portfolio';
+import Resume from './pages/Resume';
 
 const router = createBrowserRouter([
   {
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
       {
         path: '/Portfolio',
         element: <Portfolio />,
+      },
+      {
+        path: '/Resume',
+        element: <Resume/>,
       },
     ],
   },
