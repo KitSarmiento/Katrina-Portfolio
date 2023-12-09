@@ -1,7 +1,7 @@
 import "../styles/style.css";
 import PropTypes from 'prop-types';
 import Card from 'react-bootstrap/Card';
-import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa'; // Import icons from Font Awesome or another library
+import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 
 const Project = ({ title, image, projectLink, githubLink }) => {
   return (
