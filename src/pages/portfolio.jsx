@@ -16,7 +16,7 @@ const Portfolio = () => {
       githubLink: 'https://github.com/KitSarmiento/pwa-text-editor',
     },
     {
-      title: 'Nate Taker',
+      title: 'Note Taker',
       image: '/NoteTaker.png',
       projectLink: 'https://mighty-bayou-75107-3d2f68bf65b2.herokuapp.com/',
       githubLink: 'https://github.com/KitSarmiento/Note-Taker',

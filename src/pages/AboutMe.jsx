@@ -1,7 +1,12 @@
 import "../styles/style.css"
 export default function About() {
   return (
-    <div className="about-container">
+    <div className="about-container page-container">
+      <div className="about-content">
+        <div className="profile-image">
+          <img src="/profile.jpg" alt="Profile" className="profile-img" />
+        </div>
+        <div className="about-text">
       <h1>About Page</h1>
       <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
@@ -19,6 +24,8 @@ export default function About() {
       elit ullamcorper dignissim. Mi ipsum faucibus vitae aliquet nec ullamcorper sit amet risus. Sit amet consectetur adipiscing elit 
       ut aliquam.
         </p>
+        </div>
+        </div>
       </div>
     );
   }
