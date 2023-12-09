@@ -14,6 +14,8 @@ const Contact = () => {
     message: '',
   });
 
+  const [submissionMessage, setSubmissionMessage] = useState('');
+
   const { name, email, message } = formData;
 
   const handleChange = (e) => {
@@ -32,31 +34,29 @@ const Contact = () => {
     let formErrors = {};
 
     // Validate name field
-    if (name.trim() === '') {
+    if (!name.trim()) {
       formErrors = { ...formErrors, name: 'Name is required' };
     }
 
     // Validate email field
-    if (email.trim() === '') {
+    if (!email.trim()) {
       formErrors = { ...formErrors, email: 'Email is required' };
     } else if (!validateEmail(email)) {
       formErrors = { ...formErrors, email: 'Invalid email address' };
     }
 
     // Validate message field
-    if (message.trim() === '') {
+    if (!message.trim()) {
       formErrors = { ...formErrors, message: 'Message is required' };
     }
 
-    if (Object.keys(formErrors).length > 0) {
-      setErrors(formErrors);
-      return;
+    setErrors(formErrors);
+
+    if (Object.keys(formErrors).length === 0) {
+      console.log('Form submitted:', formData);
+      setFormData({ name: '', email: '', message: '' });
+      setSubmissionMessage('Thank you, your message has been submitted.');
     }
-
-    console.log('Form submitted:', formData);
-
-    setFormData({ name: '', email: '', message: '' });
-    setErrors({ name: '', email: '', message: '' });
   };
 
   return (
@@ -71,6 +71,7 @@ const Contact = () => {
             name="name"
             value={name}
             onChange={handleChange}
+            onBlur={handleSubmit}
             required
             className="contact-input"
           />
@@ -84,6 +85,7 @@ const Contact = () => {
             name="email"
             value={email}
             onChange={handleChange}
+            onBlur={handleSubmit}
             required
             className="contact-input"
           />
@@ -96,6 +98,7 @@ const Contact = () => {
             name="message"
             value={message}
             onChange={handleChange}
+            onBlur={handleSubmit}
             required
             className="contact-input"
           ></textarea>
@@ -105,6 +108,9 @@ const Contact = () => {
           {Object.keys(errors).some((key) => errors[key]) && (
             <p className="error">Please fill out all required fields correctly.</p>
           )}
+        </div>
+        <div className="submission-message">
+          {submissionMessage && <p>{submissionMessage}</p>}
         </div>
         <button type="submit" className="contact-submit">Submit</button>
       </form>

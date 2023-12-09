@@ -38,18 +38,19 @@ header {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: flex-start;
-  align-content: flex-start;
-  height: 15%;
+  align-items: center;
+  align-content: center;
+  height: 40vh;
   color: #eee;
 }
 
 .header h1 {
-  font-size: 5rem;
-  margin: 10%;
+  font-size: 4rem;
+  margin: 2%;
   padding: 20px;
   color: var(--header-text-color);
   transform-origin: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
 }
 
 .header-image::after {
@@ -76,31 +77,38 @@ header {
   left: 0;
   -webkit-backface-visibility: hidden;
   -webkit-transform: translateZ(0);
-  backface-visibility: hidden;
   transform: translateZ(0);
+  backface-visibility: hidden;
   background-image: url("/northernLights.jpg");
   background-size: cover;
-  background-position: center;
+  background-position: 50% 0;
   background-attachment: fixed;
-  animation: grow 400s linear 4ms infinite;
-  transition: all 5s ease-in-out;
+  animation: slideBackground 80s linear infinite;
   z-index: -10;
 }
 
-@keyframes grow {
+@keyframes slideBackground {
   0% {
-    transform: scale(1) translateY(0px);
+    background-position: 50% 0;
   }
-  50% {
-    transform: scale(1.2) translateY(-100vh);
+  100% {
+    background-position: 50% 220%;
   }
 }
 
+@keyframes zoom {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
 /* Navigation */
 .nav-tabs {
   padding: 10px;
   border-bottom: 2px solid var(--footer-background);
-  /* Add spacing to position the navbar below the header */
   margin-top: 20px;
 }
 
@@ -166,7 +174,6 @@ header {
 }
 
 /* About Me */
-
 .profile-image {
   width: 410px;
   height: 330px;
@@ -286,6 +293,18 @@ header {
   background-color: #ff8000;
 }
 
+.error {
+  color: red;
+  font-size: 0.9em;
+  margin-top: 5px;
+}
+
+.submission-message {
+  color: white;
+  font-size: 0.9em;
+  margin-top: 5px;
+}
+
 /* Portfolio*/
 .portfolioContainer {
   width: 80%;
@@ -319,7 +338,6 @@ header {
   background-color: var(--portfolio-card-bg);
 }
 .portfolioCard:hover {
-  /*background-color: var(--portfolio-card-hover-bg);*/
   transform: translateY(-10px);
 }
 

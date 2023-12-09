@@ -1,6 +1,7 @@
 import Project from '../components/project';
 import "../styles/style.css";
 
+//Array of projects
 const Portfolio = () => {
   const projectsItems = [
     {
