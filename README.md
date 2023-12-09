@@ -44,10 +44,15 @@ Project Screenshot:
 ## Credits
 
 • https://react-bootstrap.netlify.app/docs/components/navbar
+
 • www.npmjs.com for all dependencies/packages
+
 • https://codepen.io/nodws/pen/aWgMMQ
+
 • https://legacy.reactjs.org/tutorial/tutorial.html
+
 • Photo by stein egil liland: https://www.pexels.com/photo/aurora-borealis-1933239/
+
 • Class Activities - References from Module 20 for application structure and code.
 
 ## License
