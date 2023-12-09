@@ -15,6 +15,8 @@ This week's task is to create a React portfolio showcasing past projects and dev
 
 The React portfolio project is designed to demonstrate the developer's expertise in modern web development technologies and distinguish them within the community. The portfolio showcases completed projects that prioritize an engaging user experience, highlighting the developer's technical skills, innovative thinking, creativity, and commitment to continuous growth in web development. Ultimately, the portfolio represents the developer's ambition to leave a lasting impression on the web development landscape.
 
+Netlify Link: https://main--adorable-chaja-39932a.netlify.app/
+
 ## Installation
 
 To run the application using the terminal, please follow the instructions below.
@@ -28,10 +30,9 @@ GitHub Repository
 
 ## Usage
 
-Deployed Application:
-To access the application, simply navigate to the deployed version. Upon landing on the application, you will be directed to the “About Me” section. Use the navbar to explore the page you wish to view.
+Deployed Application: https://main--adorable-chaja-39932a.netlify.app/
 
-Deployed Application:
+To access the application, simply navigate to the deployed version. Upon landing on the application, you will be directed to the “About Me” section. Use the navbar to explore the page you wish to view.
 
 Project Recording:
 
@@ -50,6 +51,8 @@ Project Screenshot:
 • https://codepen.io/nodws/pen/aWgMMQ
 
 • https://legacy.reactjs.org/tutorial/tutorial.html
+
+• https://www.netlify.com/
 
 • Photo by stein egil liland: https://www.pexels.com/photo/aurora-borealis-1933239/
 
