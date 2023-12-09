@@ -1,32 +1,26 @@
 import { Nav } from 'react-bootstrap'; //https://react-bootstrap.netlify.app/docs/components/navbar
 import { NavLink } from 'react-router-dom';
+import '../styles/style.css';
 
 function Navigation() {
   return (
-    <Nav variant="tabs" defaultActiveKey="/">
-      <Nav.Item>
-        <NavLink exact to="/About" className="nav-link" activeClassName="active">
+      <Nav variant="tabs" defaultActiveKey="/">
+      
+        <NavLink to="/About" className="nav-link" activeclassname="active">
           About Me
         </NavLink>
-      </Nav.Item>
-      
-      <Nav.Item>
-        <NavLink to="/Contact" className="nav-link" activeClassName="active">
+  
+        <NavLink to="/Contact" className="nav-link" activeclassname="active">
           Contact
         </NavLink>
-      </Nav.Item>
-
-      <Nav.Item>
-        <NavLink to="/Portfolio" className="nav-link" activeClassName="active">
+      
+        <NavLink to="/Portfolio" className="nav-link" activeclassnamee="active">
           Portfolio
         </NavLink>
-      </Nav.Item>
 
-      <Nav.Item>
-        <NavLink to="/Resume" className="nav-link" activeClassName="active">
+        <NavLink to="/Resume" className="nav-link" activeclassnamee="active">
           Resume
         </NavLink>
-      </Nav.Item>
     </Nav>
   );
 }
